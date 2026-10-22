@@ -3,36 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixelitos: Caza de Destellos</title>
+  <title>Neon Dash — Sergio García & Wuwi</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="game-shell">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">MINI AVENTURA PIXEL</p>
-        <h1>Pixelitos <span>✦</span></h1>
-        <p class="subtitle">Explora el bosque y recoge destellos mágicos.</p>
+  <main class="wrap">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">◆</div>
+        <div>
+          <p class="eyebrow">UN JUEGO DE RITMO Y REFLEJOS</p>
+          <h1>NEON <span>DASH</span></h1>
+        </div>
       </div>
-      <div class="score-card">
-        <span class="score-label">DESTELLOS</span>
-        <strong id="score">0</strong>
-      </div>
+      <div class="best-box"><span>RÉCORD</span><strong id="best">0%</strong></div>
     </header>
 
-    <section class="game-panel">
-      <div class="game-hud">
-        <span id="status">¡Listo para explorar!</span>
-        <button id="restart" type="button">↻ Reiniciar</button>
+    <section class="stage">
+      <div class="hud">
+        <span id="message">Pulsa JUGAR para empezar</span>
+        <span id="progress">0%</span>
       </div>
-      <canvas id="game" width="800" height="480" aria-label="Juego de recoger destellos"></canvas>
-      <div class="controls">
-        <div><b>Movimiento</b><span>W A S D o flechas</span></div>
-        <div><b>Objetivo</b><span>Recoge los cristales ✦</span></div>
-        <div><b>Tip</b><span>¡Evita los charcos oscuros!</span></div>
+      <div class="progress-track"><div id="progressFill"></div></div>
+      <canvas id="game" width="960" height="440" aria-label="Juego de plataformas neon"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="big-diamond">◆</div>
+          <p class="eyebrow">¿LISTO PARA EL DESAFÍO?</p>
+          <h2 id="overlayTitle">¡A ritmo de neón!</h2>
+          <p id="overlayText">Salta los pinchos y llega al portal final.</p>
+          <button id="playBtn">▶ JUGAR</button>
+        </div>
       </div>
     </section>
-    <footer>Hecho para jugar en tu navegador · No necesitas instalar nada ✨</footer>
+
+    <section class="bottom">
+      <div class="instructions">
+        <span class="key">ESPACIO</span><span class="key">↑</span>
+        <p>Salta con <b>espacio</b>, <b>flecha arriba</b> o clic / toque en la pantalla.</p>
+      </div>
+      <div class="stats"><span>INTENTOS</span><strong id="attempts">0</strong></div>
+    </section>
+    <footer>Hecho por <b>Sergio García y Wuwi</b> <span>✦</span></footer>
   </main>
   <script src="script.js"></script>
 </body>
