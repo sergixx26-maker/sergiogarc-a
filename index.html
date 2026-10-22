@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixelitos: Caza de Destellos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MINI AVENTURA PIXEL</p>
+        <h1>Pixelitos <span>✦</span></h1>
+        <p class="subtitle">Explora el bosque y recoge destellos mágicos.</p>
+      </div>
+      <div class="score-card">
+        <span class="score-label">DESTELLOS</span>
+        <strong id="score">0</strong>
+      </div>
+    </header>
+
+    <section class="game-panel">
+      <div class="game-hud">
+        <span id="status">¡Listo para explorar!</span>
+        <button id="restart" type="button">↻ Reiniciar</button>
+      </div>
+      <canvas id="game" width="800" height="480" aria-label="Juego de recoger destellos"></canvas>
+      <div class="controls">
+        <div><b>Movimiento</b><span>W A S D o flechas</span></div>
+        <div><b>Objetivo</b><span>Recoge los cristales ✦</span></div>
+        <div><b>Tip</b><span>¡Evita los charcos oscuros!</span></div>
+      </div>
+    </section>
+    <footer>Hecho para jugar en tu navegador · No necesitas instalar nada ✨</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
